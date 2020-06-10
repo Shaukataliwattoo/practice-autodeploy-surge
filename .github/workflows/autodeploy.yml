@@ -7,7 +7,6 @@ name: Boot Camp 2020
 on:
   push:
     branches: [ master ]
-  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -19,13 +18,14 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    - name: Installing Node
       uses: actions/setup-node@v2-beta
       with: 
         node-version: v12
 
     # Runs a single command using the runners shell
     - name: Installing npm
-      run: npm install -g surge
+      run: npm install --global surge
 
     # Runs a set of commands using the runners shell
     - name: Deploying on surge
