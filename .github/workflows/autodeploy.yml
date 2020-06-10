@@ -17,7 +17,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-<<<<<<< HEAD
     - uses: actions/checkout@v2
     - name: Installing Node
       uses: actions/setup-node@v2-beta
@@ -25,8 +24,6 @@ jobs:
         node-version: v12
 
     # Runs a single command using the runners shell
-=======
->>>>>>> d5dcbf17e846c7b9df87b6fd1c82aaa018c06cc3
     - name: Installing npm
       run: npm install --global surge
 
